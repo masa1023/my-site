@@ -1,28 +1,28 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
 
-const postsDirectory = path.join(process.cwd(), "content/blog");
+const postsDirectory = path.join(process.cwd(), 'content/blog')
 
 export type Post = {
-  slug: string;
-  title: string;
-  description: string;
-  date: string;
-  tags: string[];
-  ogImage?: string;
-  content: string;
-};
+  slug: string
+  title: string
+  description: string
+  date: string
+  tags: string[]
+  ogImage?: string
+  content: string
+}
 
 export const getAllPosts = (): Post[] => {
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = fs.readdirSync(postsDirectory)
   const posts = fileNames
-    .filter((fileName) => fileName.endsWith(".md"))
+    .filter((fileName) => fileName.endsWith('.md'))
     .map((fileName) => {
-      const slug = fileName.replace(/\.md$/, "");
-      const fullPath = path.join(postsDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data, content } = matter(fileContents);
+      const slug = fileName.replace(/\.md$/, '')
+      const fullPath = path.join(postsDirectory, fileName)
+      const fileContents = fs.readFileSync(fullPath, 'utf8')
+      const { data, content } = matter(fileContents)
 
       return {
         slug,
@@ -32,18 +32,18 @@ export const getAllPosts = (): Post[] => {
         tags: data.tags || [],
         ogImage: data.ogImage,
         content,
-      };
+      }
     })
-    .sort((a, b) => (a.date > b.date ? -1 : 1));
+    .sort((a, b) => (a.date > b.date ? -1 : 1))
 
-  return posts;
-};
+  return posts
+}
 
 export const getPostBySlug = (slug: string): Post | null => {
   try {
-    const fullPath = path.join(postsDirectory, `${slug}.md`);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { data, content } = matter(fileContents);
+    const fullPath = path.join(postsDirectory, `${slug}.md`)
+    const fileContents = fs.readFileSync(fullPath, 'utf8')
+    const { data, content } = matter(fileContents)
 
     return {
       slug,
@@ -53,8 +53,8 @@ export const getPostBySlug = (slug: string): Post | null => {
       tags: data.tags || [],
       ogImage: data.ogImage,
       content,
-    };
+    }
   } catch {
-    return null;
+    return null
   }
-};
+}

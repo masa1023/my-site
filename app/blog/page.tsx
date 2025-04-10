@@ -1,16 +1,16 @@
-import Link from "next/link";
-import { format } from "date-fns";
-import { getAllPosts } from "@/lib/posts";
+import Link from 'next/link'
+import { format } from 'date-fns'
+import { getAllPosts } from '@/lib/posts'
 import {
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
 
 export default function BlogPage() {
-  const posts = getAllPosts();
+  const posts = getAllPosts()
 
   return (
     <div className="space-y-8">
@@ -33,7 +33,7 @@ export default function BlogPage() {
                 </div>
                 <div className="flex items-center gap-4 mt-4">
                   <time className="text-sm text-muted-foreground">
-                    {format(new Date(post.date), "MMMM d, yyyy")}
+                    {format(new Date(post.date), 'MMMM d, yyyy')}
                   </time>
                   <div className="flex gap-2">
                     {post.tags.map((tag) => (
@@ -49,5 +49,5 @@ export default function BlogPage() {
         ))}
       </div>
     </div>
-  );
+  )
 }
