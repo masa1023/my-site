@@ -1,4 +1,4 @@
-import { nodes as defaultNodes } from "@markdoc/markdoc";
+import { nodes as defaultNodes } from '@markdoc/markdoc'
 
 export const nodes = {
   document: {
@@ -6,27 +6,26 @@ export const nodes = {
   },
   paragraph: {
     ...defaultNodes.paragraph,
-    render: "p",
+    render: 'p',
   },
   heading: {
     ...defaultNodes.heading,
-    render: (attributes: { level: number }) => `h${attributes.level}`,
+    render: 'h{% $level %}',
   },
   list: {
     ...defaultNodes.list,
-    render: (attributes: { ordered: boolean }) =>
-      attributes.ordered ? "ol" : "ul",
+    render: '{% if $ordered %}ol{% else %}ul{% endif %}',
   },
   item: {
     ...defaultNodes.item,
-    render: "li",
+    render: 'li',
   },
   code: {
     ...defaultNodes.code,
-    render: "code",
+    render: 'code',
   },
   fence: {
     ...defaultNodes.fence,
-    render: "pre",
+    render: 'pre',
   },
-};
+}
