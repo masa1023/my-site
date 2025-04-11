@@ -23,8 +23,13 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github className="h-5 w-5" />
-              <span className="sr-only">GitHub</span>
+              <div className="h-5 w-5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  alt="GitHub"
+                  src="https://cdn.simpleicons.org/github/black/white"
+                />
+              </div>
             </a>
           </Button>
           <Button variant="outline" size="icon" asChild>
@@ -33,8 +38,10 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Twitter className="h-5 w-5" />
-              <span className="sr-only">Twitter</span>
+              <div className="h-5 w-5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img alt="X" src="https://cdn.simpleicons.org/x/black/white" />
+              </div>
             </a>
           </Button>
         </div>
