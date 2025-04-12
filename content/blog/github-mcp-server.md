@@ -3,7 +3,6 @@ title: 'GitHub の MCP Server を Go で構築する'
 description: 'Anthropic 発の MCP が急速に注目を集めています。本記事では、GitHub の MCP Server を Go で構築し、Claudeから呼びたすところまで解説しています。'
 date: '2025-04-12'
 tags: ['MCP', 'Go', 'Claude']
-published: true
 ---
 
 # GitHub の MCP Server を Go で構築する
