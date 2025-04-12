@@ -3,6 +3,11 @@ import { notFound } from 'next/navigation'
 import { getPostBySlug, getAllPosts } from '@/lib/posts'
 import { parseMarkdown } from '@/lib/markdoc'
 import { Badge } from '@/components/ui/badge'
+import { ResolvingMetadata, Metadata } from 'next'
+
+type Props = {
+  params: Promise<{ slug: string }>
+}
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -11,11 +16,22 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function BlogPost({
-  params,
-}: {
-  params: Promise<{ slug: string }>
-}) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+
+  const post = getPostBySlug(slug)
+
+  if (!post) {
+    notFound()
+  }
+
+  return {
+    title: post.title,
+    description: post.description,
+  }
+}
+
+export default async function BlogPost({ params }: Props) {
   const { slug } = await params
   const post = getPostBySlug(slug)
 

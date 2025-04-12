@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { cache } from 'react'
 
 const postsDirectory = path.join(process.cwd(), 'content/blog')
 
@@ -39,7 +40,7 @@ export const getAllPosts = (): Post[] => {
   return posts
 }
 
-export const getPostBySlug = (slug: string): Post | null => {
+export const getPostBySlug = cache((slug: string): Post | null => {
   try {
     const fullPath = path.join(postsDirectory, `${slug}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -57,4 +58,4 @@ export const getPostBySlug = (slug: string): Post | null => {
   } catch {
     return null
   }
-}
+})
