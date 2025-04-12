@@ -51,8 +51,9 @@ export default function Home() {
           <h2 className="text-2xl font-semibold mb-4">About Me</h2>
           <p className="text-muted-foreground leading-relaxed">
             Welcome to my corner of the internet! I&apos;m passionate about web
-            development, technology, and sharing knowledge through writing. Here
-            you&apos;ll find my thoughts, tutorials, and experiences in the
+            development, AI, technology, and sharing knowledge through writing.
+            <br />
+            Here you&apos;ll find my thoughts, tutorials, and experiences in the
             world of software development.
           </p>
         </CardContent>
