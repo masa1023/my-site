@@ -11,6 +11,7 @@ export type Post = {
   date: string
   tags: string[]
   ogImage?: string
+  published: boolean
   content: string
 }
 
@@ -31,6 +32,7 @@ export const getAllPosts = (): Post[] => {
         date: data.date,
         tags: data.tags || [],
         ogImage: data.ogImage,
+        published: data.published,
         content,
       }
     })
@@ -52,6 +54,7 @@ export const getPostBySlug = (slug: string): Post | null => {
       date: data.date,
       tags: data.tags || [],
       ogImage: data.ogImage,
+      published: data.published,
       content,
     }
   } catch {
