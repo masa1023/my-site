@@ -26,10 +26,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    metadataBase:
-      process.env.NODE_ENV === 'production'
-        ? new URL('https://masa373.work')
-        : undefined,
     title: post.title,
     description: post.description,
     keywords: post.tags,

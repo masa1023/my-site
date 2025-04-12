@@ -8,6 +8,10 @@ import { Footer } from '@/components/layout/footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase:
+    process.env.NODE_ENV === 'production'
+      ? new URL('https://masa373.work')
+      : undefined,
   title: 'Personal Blog',
   description: 'A modern personal blog built with Next.js and Markdoc',
 }
