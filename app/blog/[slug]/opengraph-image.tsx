@@ -1,4 +1,4 @@
-import { getPostBySlug } from '@/lib/posts'
+import { getAllPosts, getPostBySlug } from '@/lib/posts'
 import { notFound } from 'next/navigation'
 import { ImageResponse } from 'next/og'
 
@@ -8,6 +8,13 @@ export const size = {
 }
 
 export const contentType = 'image/png'
+
+export async function generateStaticParams() {
+  const posts = getAllPosts()
+  return posts.map((post) => ({
+    slug: post.slug,
+  }))
+}
 
 export default async function Image({ params }: { params: { slug: string } }) {
   const post = await getPostBySlug(params.slug)

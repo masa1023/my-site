@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { getPostBySlug, getAllPosts } from '@/lib/posts'
 import { parseMarkdown } from '@/lib/markdoc'
 import { Badge } from '@/components/ui/badge'
-import { ResolvingMetadata, Metadata } from 'next'
+import { Metadata } from 'next'
 
 type Props = {
   params: Promise<{ slug: string }>
