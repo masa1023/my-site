@@ -27,7 +27,7 @@ export default function BlogPage() {
           <Link key={post.slug} href={`/blog/${post.slug}`}>
             <Card className="hover:bg-muted/50 transition-colors">
               <CardHeader>
-                <div className="space-y-1">
+                <div className="space-y-4">
                   <CardTitle>{post.title}</CardTitle>
                   <CardDescription>{post.description}</CardDescription>
                 </div>

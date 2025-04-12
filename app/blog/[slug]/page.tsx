@@ -28,7 +28,6 @@ export default async function BlogPost({
   return (
     <article className="prose prose-neutral dark:prose-invert max-w-none">
       <header className="not-prose mb-8">
-        <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
         <div className="flex items-center gap-4 text-muted-foreground mb-4">
           <time>{format(new Date(post.date), 'MMMM d, yyyy')}</time>
           <div className="flex gap-2">
@@ -39,7 +38,6 @@ export default async function BlogPost({
             ))}
           </div>
         </div>
-        <p className="text-xl text-muted-foreground">{post.description}</p>
       </header>
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </article>

@@ -1,6 +1,6 @@
 ---
 title: 'GitHub の MCP Server を Go で構築する'
-description: 'An introduction to my personal blog and what you can expect to find here.'
+description: 'Anthropic 発の MCP が急速に注目を集めています。本記事では、GitHub の MCP Server を Go で構築し、Claudeから呼びたすところまで解説しています。'
 date: '2025-04-12'
 tags: ['MCP', 'Go', 'Claude']
 published: true
@@ -8,10 +8,10 @@ published: true
 
 # GitHub の MCP Server を Go で構築する
 
-AI 開発が進む中で、LLM と様々なデータソース・ツールを連携させる標準的な方法が求められています。
+AI 開発が進む中で、LLM と様々なデータソース・ツールを連携させる標準的な方法が求められています。  
 そんな中、Claude を開発する Anthropic 発の MCP (Model Context Protocol) が急速に注目を集めています。
 
-新しい技術をキャッチアップするには動かしてみるのが一番！
+新しい技術をキャッチアップするには手を動かしてみるのが一番！  
 ということで本記事では、GitHub 公式の GitHub MCP Server を Go で構築する方法を解説します。
 
 ## そもそも MCP とは？
