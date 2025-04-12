@@ -34,7 +34,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: post.description,
     keywords: post.tags,
     openGraph: {
-      images: `/blog/${post.slug}/opengraph-image.png`,
       type: 'article',
       publishedTime: post.date,
     },
