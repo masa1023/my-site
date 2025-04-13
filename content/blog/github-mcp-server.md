@@ -206,15 +206,11 @@ MCP が広まることで以下のような変化が起きそうだなと考え�
 レイテンシーが改善されれば、音声がメインになるかも？  
 いずれにしても今後が楽しみです！
 
-## まとめと次のステップ
+## 次のステップ
 
-この記事では、GitHub の MCP Server を Go で構築する方法を解説しました。  
-MCP の基本概念から始まり、Go 開発環境の構築、MCP Server のセットアップ、Claude での設定方法まで一連のプロセスを紹介しました。
+今回は MCP Server 自体は実装していないので、今度はそちらも紹介してみたいと思います。
 
-今回は MCP Server 自体は実装していないので、今度はそちらも紹介してみたいと思います。  
-自分が実装した MCP Server が世界中の人に使われる可能性があるのもこのアーリーフェーズの醍醐味ですね。
-
-また、LLM をフル活用して MCP Server を実装するベストプラクティスも確立してきているようです。
+ちなみに、LLM をフル活用して MCP Server を実装するベストプラクティスも確立してきているようです。
 
 [https://modelcontextprotocol.io/tutorials/building-mcp-with-llms](https://modelcontextprotocol.io/tutorials/building-mcp-with-llms)
 
@@ -231,11 +227,16 @@ MCP の基本概念から始まり、Go 開発環境の構築、MCP Server の�
 
 このように実装方法に型がもたらされたことで、LLM による実装がしやすくなったというのも MCP の大きなメリットですね。
 
-また、自分が実装した MCP Server が世界中の人に使われる可能性があるのも、このアーリーフェーズの醍醐味だと思います。
+## まとめ
 
-既存の MCP Server を使いつつ、足りないものは自分で作ってもっと LLM を便利にしていきましょうー！
+この記事では、GitHub の MCP Server を Go で構築する方法を解説しました。  
+MCP の基本概念から始まり、Go の開発環境の構築、MCP Server のセットアップ、Claude での設定方法まで一連のプロセスを紹介しました。
 
-### 参考リソース
+自分が実装した MCP Server が世界中の人に使われる可能性があるのも、このアーリーフェーズの醍醐味だと思います。
+
+既存の MCP Server を活用しつつ、足りないものは自分で作ってもっと LLM を便利にしていきましょうー！
+
+## 参考リソース
 
 - [GitHub MCP Server リポジトリ](https://github.com/github/github-mcp-server)
 - [Go 公式サイト](https://golang.org/)
