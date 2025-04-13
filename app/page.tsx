@@ -2,6 +2,12 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import profile from '@/content/profile.json'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faGithub,
+  faLinkedin,
+  faXTwitter,
+} from '@fortawesome/free-brands-svg-icons'
 
 export default function Home() {
   return (
@@ -23,11 +29,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <div className="h-5 w-5">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  alt="GitHub"
-                  src="https://cdn.simpleicons.org/github/black/white"
-                />
+                <FontAwesomeIcon icon={faGithub} />
               </div>
             </a>
           </Button>
@@ -38,8 +40,18 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <div className="h-5 w-5">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img alt="X" src="https://cdn.simpleicons.org/x/black/white" />
+                <FontAwesomeIcon icon={faXTwitter} />
+              </div>
+            </a>
+          </Button>
+          <Button variant="outline" size="icon" asChild>
+            <a
+              href={profile.social.linkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="h-5 w-5">
+                <FontAwesomeIcon icon={faLinkedin} />
               </div>
             </a>
           </Button>
