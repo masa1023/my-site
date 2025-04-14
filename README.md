@@ -23,10 +23,27 @@ npm install
 npm run dev
 ```
 
-## Features (WIP)
+4. Build for production:
 
-- Add your key features here
+```
+npm run build
+```
 
-## Technologies (WIP)
+5. Serve the production build locally:
 
-- List the technologies you're using here
+```
+npm run serve
+```
+
+## Technologies
+
+- Core:
+  - Next.js v15 (App Router)
+  - React v18
+  - TypeScript
+- Styling: Tailwind CSS v4
+- UI: shadcn/ui
+- Hosting: Cloudflare Pages
+- Markdown parser: Markdoc
+- Linter: ESLint
+- Formatter: Prettier
