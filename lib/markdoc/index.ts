@@ -1,4 +1,4 @@
-import Markdoc, { Config, Tag } from '@markdoc/markdoc'
+import Markdoc, { Config } from '@markdoc/markdoc'
 import { nodes } from './nodes'
 import { tags } from './tags'
 
