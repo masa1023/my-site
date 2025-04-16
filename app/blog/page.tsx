@@ -28,7 +28,7 @@ export default function BlogPage() {
             <Card className="hover:bg-muted/50 transition-colors">
               <CardHeader>
                 <div className="space-y-4">
-                  <CardTitle>{post.title}</CardTitle>
+                  <CardTitle className="leading-8">{post.title}</CardTitle>
                   <CardDescription>{post.description}</CardDescription>
                 </div>
                 <div className="flex items-center gap-4 mt-4">
