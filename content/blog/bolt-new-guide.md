@@ -1,6 +1,6 @@
 ---
 title: 'フルスタック AI 開発エージェント Bolt.new でモダンな個人ブログを爆速構築'
-description: 'フルスタック AI 開発エージェントとして再注目のBolt.newで、Next.jsのブログサイトを作成し、Cloudflare Pagesにデプロイするまでの流れを解説するハンズオン。'
+description: 'フルスタック AI 開発エージェントとして再注目の Bolt.new で、Next.js のブログサイトを構築し、 Cloudflare Pages にデプロイするまでの流れを解説します。'
 date: '2025-04-16'
 tags: ['Bolt.new', 'AI Agents', 'Next.js', 'Cloudflare']
 ---
