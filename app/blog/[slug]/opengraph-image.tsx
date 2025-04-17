@@ -27,21 +27,71 @@ export default async function Image({ params }: { params: { slug: string } }) {
     (
       <div
         style={{
-          height: '100%',
-          width: '100%',
-          textAlign: 'center',
           display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#fff',
-          padding: '32px',
+          height: '100%',
+          letterSpacing: '-.02em',
+          fontWeight: 700,
+          background: 'white',
+          border: '24px solid #ffde59',
+          padding: '24px',
         }}
       >
-        <div style={{ marginTop: 40, fontSize: 56, fontWeight: 600 }}>
-          {post.title}
+        <div
+          style={{
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            color: 'black',
+          }}
+        >
+          <p
+            style={{
+              fontSize: 40,
+              lineHeight: 1.5,
+              margin: 0,
+            }}
+          >
+            {post.title}
+          </p>
+
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <img
+                src="https://masa373.work/images/avatar.jpg"
+                width="56px"
+                height="56px"
+                style={{
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                }}
+              />
+              <span
+                style={{
+                  marginLeft: 8,
+                  fontSize: 24,
+                }}
+              >
+                masa373
+              </span>
+            </div>
+            <img
+              src="https://masa373.work/assets/brand-logo.png"
+              width="176px"
+            />
+          </div>
         </div>
-        <p>masa373.work</p>
       </div>
     )
   )
