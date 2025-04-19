@@ -36,7 +36,7 @@ ScholarAgent uses Generative AI to break down complex content into digestible in
 ScholarAgent processes the research paper by embedding its content using Google's Gen AI Embedding model. The embeddings are stored in **ChromaDB**, a vector database optimized for fast and accurate searches.
 
 ```python
-# Embed the document using Gemini and store in ChromaDB
+# Embed the PDF(research paper) using Gemini and store in ChromaDB
 from chromadb import Documents, EmbeddingFunction
 
 class GeminiEmbeddingFunction(EmbeddingFunction):
@@ -46,7 +46,11 @@ class GeminiEmbeddingFunction(EmbeddingFunction):
             contents=input,
         )
         return [e.values for e in response.embeddings]
+embed_fn = GeminiEmbeddingFunction()
 
+# Initialize the ChromaDB client and create a collection
+chroma_client = chromadb.Client()
+db = chroma_client.get_or_create_collection(name=DB_NAME, embedding_function=embed_fn)
 db.add(documents=chunked_documents, ids=[str(i) for i in range(len(chunked_documents))])
 ```
 
@@ -65,9 +69,12 @@ retrieved_chunks = result["documents"]
 The retrieved context is passed to **Gemini 2.0 Flash**, which generates a conversational response tailored to the user's query.
 
 ```python
+# Initialize agent model with tools
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
+llm_with_tools = llm.bind_tools([search_info])
+
 # Generate a response using Gemini 2.0 Flash
-response = llm.invoke([retrieved_chunks])
-print(response.content)
+response = llm_with_tools.invoke([retrieved_chunks])
 ```
 
 ### 4. Agent-Orchestrated Function Calling with LangGraph
@@ -75,11 +82,28 @@ print(response.content)
 ScholarAgent uses **LangGraph** to orchestrate complex workflows, such as rephrasing queries or chaining multiple steps. This ensures a seamless user experience.
 
 ```python
-# Define a chatbot node with tools
-def chatbot_node_with_tools(state):
-    new_output = llm_with_tools.invoke([state["messages"]])
-    return {"messages": [new_output]}
+from langgraph.graph import StateGraph
+from IPython.display import Image
+
+graph_builder = StateGraph(BotState)
+
+# Define the nodes
+graph_builder.add_node("chatbot", chatbot_node_with_tools)
+graph_builder.add_node("human", human_node)
+graph_builder.add_node("tools", tool_node)
+
+# Define the edges
+graph_builder.add_conditional_edges("chatbot", maybe_route_to_tools)
+graph_builder.add_conditional_edges("human", maybe_exit_human_node)
+graph_builder.add_edge("tools", "chatbot")
+graph_builder.add_edge(START, "chatbot")
+
+graph_with_menu = graph_builder.compile()
+
+Image(graph_with_menu.get_graph().draw_mermaid_png())
 ```
+
+![Image](/images/blog/gen-ai-intensive-capstone-3.png)
 
 ---
 
@@ -122,12 +146,12 @@ Try ScholarAgent today and explore the groundbreaking concepts behind _“Attent
 state = graph_with_menu.invoke({"messages": []})
 ```
 
+![Image](/images/blog/gen-ai-intensive-capstone-2.png)
+
 ---
 
 ## Call to Action
 
 Have questions about the Transformer architecture? Start chatting with ScholarAgent and experience how Generative AI can simplify complex research!
-
-![Image](/images/blog/gen-ai-intensive-capstone-2.png)
 
 **ScholarAgent** - [https://www.kaggle.com/code/masa373dev/capstone-scholaragent](https://www.kaggle.com/code/masa373dev/capstone-scholaragent)
