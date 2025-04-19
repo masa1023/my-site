@@ -30,10 +30,9 @@ export default async function Image({ params }: { params: { slug: string } }) {
           display: 'flex',
           height: '100%',
           letterSpacing: '-.02em',
-          fontWeight: 700,
           background: 'white',
           border: '24px solid #ffde59',
-          padding: '24px',
+          padding: 32,
         }}
       >
         <div
@@ -47,8 +46,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
         >
           <p
             style={{
-              fontSize: 40,
-              lineHeight: 1.5,
+              fontSize: 80,
               margin: 0,
             }}
           >
@@ -70,17 +68,16 @@ export default async function Image({ params }: { params: { slug: string } }) {
             >
               <img
                 src="https://masa373.work/images/avatar.jpg"
-                width="56px"
-                height="56px"
                 style={{
+                  width: 64,
+                  height: 64,
                   borderRadius: '50%',
-                  overflow: 'hidden',
                 }}
               />
               <span
                 style={{
+                  fontSize: 32,
                   marginLeft: 8,
-                  fontSize: 24,
                 }}
               >
                 masa373
@@ -88,11 +85,16 @@ export default async function Image({ params }: { params: { slug: string } }) {
             </div>
             <img
               src="https://masa373.work/assets/brand-logo.png"
-              width="176px"
+              style={{
+                height: 80,
+              }}
             />
           </div>
         </div>
       </div>
-    )
+    ),
+    {
+      ...size,
+    }
   )
 }
