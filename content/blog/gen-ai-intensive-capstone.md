@@ -2,7 +2,7 @@
 title: 'ScholarAgent: Making Machine Learning Research Accessible with Generative AI'
 description: 'Exploring how ScholarAgent uses Generative AI, RAG, and LangGraph to make complex machine learning research papers more accessible and interactive for learners.'
 date: '2025-04-19'
-tags: ['Generative AI', 'RAG', 'AI Agents']
+tags: ['Generative AI', 'AI Agents', 'RAG']
 ---
 
 # ScholarAgent: Making Machine Learning Research Accessible with Generative AI
@@ -13,7 +13,7 @@ Understanding complex machine learning research papers can be daunting, especial
 
 This blogpost explores how ScholarAgent leverages cutting-edge Gen AI capabilities to simplify dense academic content, making it accessible to students, developers, and enthusiasts alike.
 
-ScholarAgent: [https://www.kaggle.com/code/masa373dev/capstone-scholaragent](https://www.kaggle.com/code/masa373dev/capstone-scholaragent)
+**ScholarAgent** - [https://www.kaggle.com/code/masa373dev/capstone-scholaragent](https://www.kaggle.com/code/masa373dev/capstone-scholaragent)
 
 ---
 
@@ -128,4 +128,6 @@ state = graph_with_menu.invoke({"messages": []})
 
 Have questions about the Transformer architecture? Start chatting with ScholarAgent and experience how Generative AI can simplify complex research!
 
-ScholarAgent: [https://www.kaggle.com/code/masa373dev/capstone-scholaragent](https://www.kaggle.com/code/masa373dev/capstone-scholaragent)
+![Image](/images/blog/gen-ai-intensive-capstone-2.png)
+
+**ScholarAgent** - [https://www.kaggle.com/code/masa373dev/capstone-scholaragent](https://www.kaggle.com/code/masa373dev/capstone-scholaragent)
