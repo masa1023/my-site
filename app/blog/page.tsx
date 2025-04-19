@@ -8,6 +8,16 @@ import {
   CardDescription,
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import { Metadata } from 'next'
+
+const title = 'Blog Posts'
+const description =
+  'Thoughts, tutorials, and insights about web development, AI, and emerging technologies.'
+
+export const metadata: Metadata = {
+  title,
+  description,
+}
 
 export default function BlogPage() {
   const posts = getAllPosts()
@@ -15,11 +25,8 @@ export default function BlogPage() {
   return (
     <div className="space-y-8">
       <div className="space-y-4">
-        <h1 className="text-3xl font-bold">Blog Posts</h1>
-        <p className="text-muted-foreground">
-          Thoughts, tutorials, and insights about web development, AI, and
-          emerging technologies.
-        </p>
+        <h1 className="text-3xl font-bold">{title}</h1>
+        <p className="text-muted-foreground">{description}</p>
       </div>
 
       <div className="grid gap-6">

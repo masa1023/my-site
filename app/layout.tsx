@@ -12,7 +12,10 @@ export const metadata: Metadata = {
     process.env.NODE_ENV === 'production'
       ? new URL('https://masa373.work')
       : undefined,
-  title: 'masa373.work',
+  title: {
+    default: 'masa373.work',
+    template: '%s | masa373.work',
+  },
   description:
     "Welcome to my corner of the internet! I'm passionate about web development, AI, technology, and sharing knowledge through writing. Here you'll find my thoughts, tutorials, and experiences in the world of software development.",
 }
