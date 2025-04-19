@@ -17,8 +17,8 @@ export default function BlogPage() {
       <div className="space-y-4">
         <h1 className="text-3xl font-bold">Blog Posts</h1>
         <p className="text-muted-foreground">
-          Thoughts, tutorials, and insights about web development and
-          technology.
+          Thoughts, tutorials, and insights about web development, AI, and
+          emerging technologies.
         </p>
       </div>
 
