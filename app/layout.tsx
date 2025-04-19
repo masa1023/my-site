@@ -12,8 +12,9 @@ export const metadata: Metadata = {
     process.env.NODE_ENV === 'production'
       ? new URL('https://masa373.work')
       : undefined,
-  title: 'Personal Blog',
-  description: 'A modern personal blog built with Next.js and Markdoc',
+  title: 'masa373.work',
+  description:
+    "Welcome to my corner of the internet! I'm passionate about web development, AI, technology, and sharing knowledge through writing. Here you'll find my thoughts, tutorials, and experiences in the world of software development.",
 }
 
 export default function RootLayout({

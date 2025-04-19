@@ -29,6 +29,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
         style={{
           display: 'flex',
           height: '100%',
+          width: '100%',
           letterSpacing: '-.02em',
           background: 'white',
           border: '24px solid #ffde59',
