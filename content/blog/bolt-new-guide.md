@@ -69,17 +69,19 @@ Bolt.new は無料プランだと 150,000 トークン / 日の利用制限が�
 
 **プロンプト作成依頼**
 
-```
+```md
 以下の内容でブログサイトを作成したい。
 そのための英文プロンプトを作成してください。
 
 [条件]
+
 - 抜け漏れがあった場合は補足してください
 - 作成したプロンプトをワンクリックでコピーできるように出力してください
 
 ---
 
 # Tech stack:
+
 - Framework: Next.js, React, TypeScript
 - UI: shadcn/ui, Tailwind, Markdoc
 - Test: Vitest, React Testing Library, Happy DOM
@@ -90,6 +92,7 @@ Bolt.new は無料プランだと 150,000 トークン / 日の利用制限が�
 - Server: Cloudflare Pages
 
 # Requirements:
+
 - 画像はpublicディレクトリで管理
 - 見た目はモダンな感じ
 - packageは最新のものを利用
@@ -100,6 +103,7 @@ Bolt.new は無料プランだと 150,000 トークン / 日の利用制限が�
 - README.mdを英語で作成 (プロジェクトの概要、インストール手順、使用方法、利用技術を含む)
 
 # Features:
+
 - Blog list (top page)
 - Blog detail page
 - Author profile section on the top page
@@ -111,12 +115,13 @@ Bolt.new は無料プランだと 150,000 トークン / 日の利用制限が�
 
 **作成されたプロンプト**
 
-```
+```md
 You are an expert Next.js developer.
 
 Please build a modern, responsive blog site based on the following specifications.
 
 ## Tech Stack
+
 - Framework: Next.js, React, TypeScript
 - UI Library: shadcn/ui, Tailwind CSS, Markdoc
 - Testing: Vitest, React Testing Library, Happy DOM
@@ -130,6 +135,7 @@ Please build a modern, responsive blog site based on the following specification
 - Syntax Highlighting: shiki for Markdoc code blocks
 
 ## Requirements
+
 - Store all images in the `/public` directory.
 - Modern and stylish UI design.
 - Always use the latest stable versions of all packages.
@@ -141,6 +147,7 @@ Please build a modern, responsive blog site based on the following specification
 - Optimize the project for deployment on Cloudflare Pages.
 
 ## Features
+
 - Blog list page (Top page)
 - Blog detail page
 - Author profile section on the top page
@@ -154,6 +161,7 @@ Please build a modern, responsive blog site based on the following specification
 - Clean and maintainable code structure
 
 ## Deliverables
+
 - All source code
 - `README.md` written in English, including:
   - Project Overview
@@ -162,6 +170,7 @@ Please build a modern, responsive blog site based on the following specification
   - Tech Stack Description
 
 ## Notes
+
 - Follow best practices for performance, accessibility, and SEO.
 - Ensure proper folder structure and file naming conventions.
 - Use pnpm as the package manager.

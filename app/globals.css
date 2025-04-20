@@ -172,18 +172,6 @@
   @apply my-6 list-decimal list-inside;
 }
 
-.prose code {
-  @apply bg-muted px-1.5 py-0.5 rounded text-sm;
-}
-
-.prose pre {
-  @apply bg-muted p-4 rounded-lg overflow-x-auto my-6;
-}
-
-.prose pre code {
-  @apply bg-transparent p-0 text-sm;
-}
-
 .prose blockquote {
   @apply border-l-4 border-muted pl-4 italic my-6;
 }

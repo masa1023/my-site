@@ -20,12 +20,11 @@ export const nodes = {
     ...defaultNodes.item,
     render: 'li',
   },
-  code: {
-    ...defaultNodes.code,
-    render: 'code',
-  },
   fence: {
-    ...defaultNodes.fence,
-    render: 'pre',
+    render: 'Fence',
+    attributes: {
+      content: { type: String, required: true },
+      language: { type: String, required: true },
+    },
   },
 }

@@ -4,6 +4,8 @@ import { nodes } from './nodes'
 import { tags } from './tags'
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'
 import { LightbulbIcon, TriangleAlert, Info } from 'lucide-react'
+import { codeToHtml } from 'shiki'
+import type { BundledLanguage } from 'shiki'
 
 function Callout({
   title,
@@ -28,6 +30,20 @@ function Callout({
   )
 }
 
+export async function Fence({
+  children,
+  language,
+}: {
+  children: string
+  language: BundledLanguage
+}) {
+  const html = await codeToHtml(children, {
+    lang: language,
+    theme: 'tokyo-night',
+  })
+  return <div className="fence" dangerouslySetInnerHTML={{ __html: html }} />
+}
+
 export function parseMarkdown(content: string) {
   const ast = Markdoc.parse(content)
   const config: Config = {
@@ -39,6 +55,7 @@ export function parseMarkdown(content: string) {
   return Markdoc.renderers.react(transformed, React, {
     components: {
       Callout,
+      Fence,
     },
   })
 }
