@@ -74,7 +74,7 @@ export default async function BlogPost({ params }: Props) {
           </div>
         </div>
       </header>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <div>{content}</div>
     </article>
   )
 }

@@ -152,10 +152,6 @@
   line-height: 1.75;
 }
 
-.prose p {
-  @apply my-6;
-}
-
 .prose h2 {
   @apply text-2xl font-semibold mt-8 mb-4;
 }
