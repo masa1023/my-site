@@ -5,8 +5,6 @@ date: '2025-04-12'
 tags: ['MCP', 'Go', 'Claude']
 ---
 
-# GitHub の MCP Server を Go で構築する
-
 AI 開発が進む中で、LLM と様々なデータソース・ツールを連携させる標準的な方法が求められています。  
 そんな中、Claude を開発する Anthropic 発の MCP (Model Context Protocol) が急速に注目を集めています。
 

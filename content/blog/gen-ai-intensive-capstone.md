@@ -5,8 +5,6 @@ date: '2025-04-19'
 tags: ['Generative AI', 'AI Agents', 'RAG']
 ---
 
-# ScholarAgent: Making Machine Learning Research Accessible with Generative AI
-
 ## Introduction
 
 Understanding complex machine learning research papers can be daunting, especially for learners without a strong academic background. _ScholarAgent_ bridges this gap by enabling users to ask questions about the seminal paper _“Attention Is All You Need”_ and receive clear, conversational answers powered by Generative AI.
