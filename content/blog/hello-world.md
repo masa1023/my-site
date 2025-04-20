@@ -5,8 +5,6 @@ date: '2025-04-10'
 tags: ['Introduction']
 ---
 
-# Welcome to My Blog
-
 Hello! I'm excited to welcome you to my personal blog.
 
 Here, I'll be sharing my thoughts, experiences, and insights about web development, AI, technology, and everything in between.

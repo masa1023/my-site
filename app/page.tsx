@@ -15,7 +15,7 @@ export default function Home() {
       <section className="text-center space-y-4">
         <Avatar className="w-24 h-24 mx-auto">
           <AvatarImage src={profile.avatar} alt={profile.name} />
-          <AvatarFallback>{profile.name.charAt(0)}</AvatarFallback>
+          <AvatarFallback>MM</AvatarFallback>
         </Avatar>
         <h1 className="text-3xl font-bold">{profile.name}</h1>
         <p className="text-xl text-muted-foreground max-w-[600px] mx-auto">
