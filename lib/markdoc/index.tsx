@@ -32,17 +32,17 @@ function Callout({
 }
 
 export async function Fence({
-  children,
+  content,
   language,
 }: {
-  children: string
+  content: string
   language: BundledLanguage
 }) {
-  const html = await codeToHtml(children, {
+  const html = await codeToHtml(content, {
     lang: language,
     theme: 'tokyo-night',
   })
-  return <CodeBlock content={children} html={html} />
+  return <CodeBlock content={content} html={html} />
 }
 
 export function parseMarkdown(content: string) {
