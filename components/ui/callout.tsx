@@ -1,5 +1,5 @@
 import { Info, LightbulbIcon, TriangleAlert } from 'lucide-react'
-import { Alert, AlertTitle, AlertDescription } from './alert'
+import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'
 
 const Callout = ({
   title,
