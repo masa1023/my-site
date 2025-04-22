@@ -1,9 +1,10 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import Markdoc, { Config } from '@markdoc/markdoc'
 import { nodes } from './nodes'
 import { tags } from './tags'
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'
-import { LightbulbIcon, TriangleAlert, Info } from 'lucide-react'
+import { CodeBlock } from '@/components/ui/code-block'
+import { LightbulbIcon, TriangleAlert, Info, Copy, Check } from 'lucide-react'
 import { codeToHtml } from 'shiki'
 import type { BundledLanguage } from 'shiki'
 
@@ -41,7 +42,7 @@ export async function Fence({
     lang: language,
     theme: 'tokyo-night',
   })
-  return <div className="fence" dangerouslySetInnerHTML={{ __html: html }} />
+  return <CodeBlock content={children} html={html} />
 }
 
 export function parseMarkdown(content: string) {
