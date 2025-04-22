@@ -23,8 +23,8 @@ export const nodes = {
   fence: {
     render: 'Fence',
     attributes: {
-      content: { type: String, required: true },
       language: { type: String, required: true },
+      content: { type: String, required: true },
     },
   },
 }
