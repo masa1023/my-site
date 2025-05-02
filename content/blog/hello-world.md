@@ -9,13 +9,11 @@ Hello! I'm excited to welcome you to my personal blog.
 
 Here, I'll be sharing my thoughts, experiences, and insights about web development, AI, technology, and everything in between.
 
-## What to Expect
-
 I'll be covering various topics including:
 
 - Web Development
 - Machine Learning
-- LLMs, AI Agents, MCP, RAG
+- Generative AI, LLMs, AI Agents
 - Best Practices and Tips
 - Personal Projects and Experiences
 
