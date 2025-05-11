@@ -100,21 +100,23 @@ ChatGPT や Gemini のようなチャットボットとの対話は簡単なプ�
 - [Prompting](https://www.kaggle.com/code/markishere/day-1-prompting): パラメータを調整したりプロンプトエンジニアリングを活用しつつ、Python で Gemini 2.0 Flash の API を叩いてみるという内容。Enum mode や JSON mode で出力を固定する手法やモデルにコードの生成・実行をさせる方法の紹介も。
 - [Evaluation and structured output](https://www.kaggle.com/code/markishere/day-1-evaluation-and-structured-output):Pointwise evaluation と Pairwise evaluation を用いてモデルの性能評価を行った。
 
-## Day 2:
+## Day 2: Embeddings と Vector Stores
 
 ### 学習リソース
 
-- Whitepaper: https://www.kaggle.com/whitepaper-embeddings-and-vector-stores
-- Podcast: https://www.youtube.com/watch?v=xCAVsst6WJ8
+- Whitepaper: [https://www.kaggle.com/whitepaper-embeddings-and-vector-stores](https://www.kaggle.com/whitepaper-embeddings-and-vector-stores)
+- Podcast: [https://www.youtube.com/watch?v=xCAVsst6WJ8](https://www.youtube.com/watch?v=xCAVsst6WJ8)
 - Kaggle Notebook:
-  - https://www.kaggle.com/code/markishere/day-2-document-q-a-with-rag
-  - https://www.kaggle.com/code/markishere/day-2-embeddings-and-similarity-scores
-  - https://www.kaggle.com/code/markishere/day-2-classifying-embeddings-with-keras
-- YouTube Live: https://www.youtube.com/watch?v=AjpjCHdIINU
+  - [https://www.kaggle.com/code/markishere/day-2-document-q-a-with-rag](https://www.kaggle.com/code/markishere/day-2-document-q-a-with-rag)
+  - [https://www.kaggle.com/code/markishere/day-2-embeddings-and-similarity-scores](https://www.kaggle.com/code/markishere/day-2-embeddings-and-similarity-scores)
+  - [https://www.kaggle.com/code/markishere/day-2-classifying-embeddings-with-keras](https://www.kaggle.com/code/markishere/day-2-classifying-embeddings-with-keras)
+- YouTube Live: [https://www.youtube.com/watch?v=AjpjCHdIINU](https://www.youtube.com/watch?v=AjpjCHdIINU)
 
 2 日目の資料「Embeddings & Vector Stores」では、様々な種類のデータを統一された **ベクトル表現（Embedding）** に変換し、それらを効率的に管理・検索するための技術について、解説しています。
 
-まず、**Embedding(埋め込み表現)** とは、テキスト、画像、音声などの実世界のデータを **低次元の数値ベクトル** に変換したもので、ベクトル空間上での距離が元のデータの **意味的な類似性** を反映するように設計されています。これにより、大規模なデータの効率的な処理と格納、そして意味に基づいた比較や検索が可能になります。
+まず、**Embedding(埋め込み表現)** とは、テキスト、画像、音声などの実世界のデータを **低次元の数値ベクトル** に変換したもので、ベクトル空間上での距離が元のデータの **意味的な類似性** を反映するように設計されています。
+
+これにより、大規模なデータの効率的な処理と保存、そして意味に基づいた比較や検索が可能になります。
 
 資料では、以下のようないくつかの主要な Embedding 手法が紹介されました:
 
@@ -123,9 +125,10 @@ ChatGPT や Gemini のようなチャットボットとの対話は簡単なプ�
 - Structured data embeddings
 - Graph embeddings
 
-Embedding の学習には、デュアルエンコーダー構造や Contrastive Loss が一般的に用いられ、ファウンデーションモデルからのファインチューニングも行われます。
+Embedding の学習には、デュアルエンコーダー構造や Contrastive Loss が一般的に用いられ、基盤モデルからのファインチューニングも行われます。
 
-次に、生成された Embedding を効率的に検索するための **ベクトル検索** について説明されています。これは、厳密なキーワード一致ではなく、ベクトル間の類似性（ユークリッド距離、コサイン類似度など）に基づいて検索を行うものです。  
+次に、生成された Embedding を効率的に検索するための **ベクトル検索** について説明されています。これは、厳密なキーワード一致ではなく、ベクトル間の類似性（ユークリッド距離、コサイン類似度など）に基づいて検索を行うものです。
+
 大規模データセットでは、線形検索は非効率なため、**近似最近傍探索（ANN）** アルゴリズムが不可欠です。資料では、LSH(Locality sensitive hashing)、ツリーベース（Kd-tree, Ball-tree）、HNSW(Hierarchical navigable small worlds)、ScaNN といった主要な ANN アルゴリズムが紹介されています。
 
 これらの Embedding とベクトル検索を大規模かつ本番環境で管理するために **ベクトルデータベース** が使用されます。ベクトルデータベースは、ベクトル、関連するメタデータ、元のコンテンツを格納し、ANN アルゴリズムによる高速検索を可能にします。Vertex AI Vector Search のようなマネージドサービスや、Weaviate、ChromaDB などのオープンソースの選択肢が挙げられています。
@@ -134,9 +137,9 @@ Embedding の学習には、デュアルエンコーダー構造や Contrastive 
 
 ### Day 2: Kaggle Notebook
 
-- [Document Q&A with RAG](https://www.kaggle.com/code/markishere/day-2-document-q-a-with-rag): ハードコードしたテキストを情報のソースとして RAG を実装し、Embedding、ベクトル検索、プロンプトへのテキスト埋め込み、ソースを元にモデルが回答、といった RAG の基本動作を確認。
+- [Document Q&A with RAG](https://www.kaggle.com/code/markishere/day-2-document-q-a-with-rag): ハードコードしたテキストを情報ソースとして RAG を実装し、Embedding、ベクトル検索、プロンプトへのテキスト埋め込み、ソースを元にモデルが回答、といった RAG の基本動作を確認。
 - [Embeddings and similarity scores](https://www.kaggle.com/code/markishere/day-2-embeddings-and-similarity-scores): Gemini API(text-embedding-004)を使ってテキスト間の類似度スコアの算出を行った。
-- [Classifying embeddings with Keras](https://www.kaggle.com/code/markishere/day-2-classifying-embeddings-with-keras): 同じく text-embedding-004 を用いて文章のカテゴリー分類を行った。具体的には、Keras を用いて 1 つの隠れ層のみのニューラルネットワークを構築し、ベクトル変換を行った文章を説明変数、カテゴリラベルを目的変数として学習させたモデルを作成し、テストデータで性能の評価を行った。
+- [Classifying embeddings with Keras](https://www.kaggle.com/code/markishere/day-2-classifying-embeddings-with-keras): 同じく text-embedding-004 を用いて文章のカテゴリー分類を行った。具体的には、Keras を用いて 1 つの隠れ層のみのニューラルネットワークを構築し、ベクトル変換を行った文章を説明変数、カテゴリラベルを目的変数として学習させたモデルを作成し、テストデータで性能評価を行った。
 
 ## Day 3:
 
