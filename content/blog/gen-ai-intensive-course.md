@@ -5,15 +5,20 @@ date: '2025-04-22'
 tags: ['Generative AI', 'AI Agents', 'RAG']
 ---
 
-2025年3月31日から4月4日まで開催された Google 主催の「5-Day Gen AI Intensive Course with Google」に参加してきました！
-コースを通して生成 AI の最前線とその応用について、大きな学びを得ることができました。
+2025年3月31日から4月4日まで開催された Google 主催の 5-Day Gen AI Intensive Course with Google に参加してきました！
 
-本記事では、5日間のコースを日ごとに振り返りながら、そこで得た学びについて、まとめたいと思います。
+コースを通して生成 AI の最前線とその活用について、大きな学びを得ることができました。
+
+本記事では、5日間のコースを日ごとに振り返りながら、そこで得た学びについてまとめたいと思います。
+
 読者の皆さまの次回の参加に繋がったり AI に興味を持つきっかけになれば幸いです！
 
 ## 「5-Day Gen AI Intensive Course with Google」とは？
 
-「5-Day Gen AI Intensive Course with Google」とは、Google 主催の生成 AI に特化した 5 日間の短期集中オンライン講義です。
+![Image](/images/blog/gen-ai-intensive-course-1.png)
+
+[5-Day Gen AI Intensive Course with Google](https://www.kaggle.com/learn-guide/5-day-genai) とは、Google 主催の生成 AI に特化した 5 日間の短期集中オンライン講義です。
+
 今回は世界中から約 25 万人が参加したとのことです！すごい！
 
 ### コースの特徴
@@ -32,16 +37,20 @@ tags: ['Generative AI', 'AI Agents', 'RAG']
 
 ### 取り組んでみての感想
 
-一日の PDF のボリュームがかなりあり、PDF と Notebook が複数ある日もあったので仕事と並行して進めるのはなかなか大変でした！しかも全コンテンツ英語！
+一日の PDF のボリュームがかなりあり、PDF と Notebook が複数ある日もあったので仕事と並行して進めるのはなかなか大変でした。しかも全コンテンツ英語！
 
-その上内容も本格的で、「LLM の基礎的な仕組みとプロンプトエンジニアリングの応用を学ぶくらいでしょ？」と思っていたらプログラミングや機械学習の基礎知識を前提としたかなり技術に踏み込んだコンテンツがほとんどでした。
+内容についても「LLM の基礎的な仕組みとプロンプトエンジニアリングの応用を学ぶくらいでしょ？」と思っていたら、プログラミングや機械学習の基礎知識を前提にしたかなり技術に踏み込んだコンテンツがほとんどでした。
 
 英語 + 新しい技術領域なので初日にどっと疲れ、これは三日坊主コースかもと思いましたが、最先端の領域を学んでいくうちにどんどん楽しくなってきて、気がつけば 5 日間のコースを完走していました！
 
-特に YouTube LIVE を通して、AI プロダクトの開発に第一線で携わっている Google 社員のセッションに参加できたのは刺激的でした！  
-みなさんラフに自宅から参加されている方が多かったので、Zoom ミーティングにお邪魔しているような感覚に近く、オンラインとはいえ本場の臨場感を味わうことができました。
+特に YouTube LIVE を通して、AI プロダクトの開発に第一線で携わっている Google 社員のセッションに参加できたのは刺激的でした！
 
-以下に 5 日間で学んだ内容についてざっくりまとめます。  
+![Image](/images/blog/gen-ai-intensive-course-2.png)
+_(YouTube LIVE の様子)_
+
+ラフに自宅から参加されている方が多かったので、Zoom ミーティングにお邪魔しているような感覚に近く、オンラインとはいえ現場の臨場感を味わうことができました。
+
+それでは、以下に 5 日間で学んだ内容についてざっくりまとめます。  
 利用した教材のほとんどがオンラインで公開されており、誰でも閲覧可能なので、それらのリソースへのリンクも一緒にまとめていきます。
 
 ## Day 1: LLM の基礎とプロンプトエンジニアリング
@@ -49,15 +58,15 @@ tags: ['Generative AI', 'AI Agents', 'RAG']
 ### 学習リソース
 
 - Whitepaper:
-  - https://www.kaggle.com/whitepaper-foundational-llm-and-text-generation
-  - https://www.kaggle.com/whitepaper-prompt-engineering
+  - [https://www.kaggle.com/whitepaper-foundational-llm-and-text-generation](https://www.kaggle.com/whitepaper-foundational-llm-and-text-generation)
+  - [https://www.kaggle.com/whitepaper-prompt-engineering](https://www.kaggle.com/whitepaper-prompt-engineering)
 - Podcast:
-  - https://www.youtube.com/watch?v=Na3O4Pkbp-U
-  - https://www.youtube.com/watch?v=CFtX0ZyLSAY
+  - [https://www.youtube.com/watch?v=Na3O4Pkbp-U](https://www.youtube.com/watch?v=Na3O4Pkbp-U)
+  - [https://www.youtube.com/watch?v=CFtX0ZyLSAY](https://www.youtube.com/watch?v=CFtX0ZyLSAY)
 - Kaggle Notebook:
-  - https://www.kaggle.com/code/markishere/day-1-prompting
-  - https://www.kaggle.com/code/markishere/day-1-evaluation-and-structured-output
-- YouTube Live: https://www.youtube.com/watch?v=WpIfAeCIFc0
+  - [https://www.kaggle.com/code/markishere/day-1-prompting](https://www.kaggle.com/code/markishere/day-1-prompting)
+  - [https://www.kaggle.com/code/markishere/day-1-evaluation-and-structured-output](https://www.kaggle.com/code/markishere/day-1-evaluation-and-structured-output)
+- YouTube Live: [https://www.youtube.com/watch?v=WpIfAeCIFc0](https://www.youtube.com/watch?v=WpIfAeCIFc0)
 
 ### 大規模言語モデル（LLM）
 
