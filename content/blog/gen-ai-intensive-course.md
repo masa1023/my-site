@@ -238,3 +238,7 @@ Capstone Project の概要は以下の通りです:
 - [Kaggle Notebook](https://www.kaggle.com/code/masa373dev/capstone-scholaragent)
 
 ## 結論
+
+生成 AI の最前線の知識を吸収することに5日間がっつりと集中でき、非常に有意義な時間となりました！
+こんなに良質なコンテンツを無償で提供してくれた Google さんには感謝しかないです。
+AIにより言語格差がなくなってきているので、翻訳ツールの助けも借りながら、最新のAI情報は英語でどんどんキャッチアップしていきたいですね！
