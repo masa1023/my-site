@@ -190,7 +190,7 @@ Med-PaLM はその初期バージョンであり、医療に関する質問応�
 
 ### Day 4: Kaggle Notebook
 
-- [Fine tuning a custom model](https://www.kaggle.com/code/markishere/day-4-fine-tuning-a-custom-model): 文章の分類モデルのファインチューニングを行った。トレーニング用データーと共に、従来の機械学習で用いるバッチサイズ、エポック数、Learning Rate といったハイパーパラメーターを指定するだけでチューニングが完了し、正答率が 37%->87%ほどまで向上した。
+- [Fine tuning a custom model](https://www.kaggle.com/code/markishere/day-4-fine-tuning-a-custom-model): 文章の分類モデルのファインチューニングを行った。トレーニングデータと共に、従来の機械学習で用いるバッチサイズ、エポック数、Learning Rate といったハイパーパラメータを指定するだけでチューニングが完了し、正答率が 37% → 87% ほどまで向上した。
 - [Google Search grounding](https://www.kaggle.com/code/markishere/day-4-google-search-grounding): 特定の情報源に基づいて LLM の生成内容を裏付ける Grounding というテクニックの実装例を確認した。具体的には、Gemini のツールとして Google Search を指定し、Google 検索の結果をもとに回答を行うプログラムを作成した。
 
 ## Day 5:
@@ -209,7 +209,7 @@ Med-PaLM はその初期バージョンであり、医療に関する質問応�
 - Discover: 多数の基盤モデルを品質・コスト・法的観点から評価して選定
 - Develop & Experiment: プロンプト設計とファインチューニングを繰り返し評価メトリクスを蓄積
   - Chain & Augment: RAG やエージェントなど複数モデルや外部 API と連携し客観性・推論力を補完
-  - Tuning & Traning: 複雑なタスクには SFT や RLHF を行う。モデル圧縮・量子化などで計算資源を最適化
+  - Tuning & Training: 複雑なタスクには SFT や RLHF を行う。モデル圧縮・量子化などで計算資源を最適化
   - Data Practices: プロンプト、ベクトルデータベース、合成データなど様々なデータを統合し、バージョン管理・追跡・再現可能な形で扱えるパイプラインの構築が必要
   - Evaluate: 手動評価と自動評価のトレードオフを理解した上でユースケースに即した評価手法を設計
 - Deploy: プロンプトや外部データセット、チューニング済みモデルなど、生成 AI 独自のリソースを含む CI/CD、インフラ構築、モデル最適化が必要
