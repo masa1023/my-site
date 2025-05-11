@@ -1,23 +1,23 @@
 ---
 title: '参加レポート: 5-Day Gen AI Intensive Course with Google'
-description: 'Exploring how ScholarAgent uses Generative AI, RAG, and LangGraph to make complex machine learning research papers more accessible and interactive for learners.'
-date: '2025-04-22'
-tags: ['Generative AI', 'AI Agents', 'RAG']
+description: 'Google 主催の 5-Day Gen AI Intensive Course with Google に参加してきました。本記事は、受講レポートとして全5日間のコースの内容を日ごとに振り返りながらまとめたいと思います。'
+date: '2025-05-11'
+tags: ['Generative AI', 'AI Agents']
 ---
 
 2025年3月31日から4月4日まで開催された Google 主催の 5-Day Gen AI Intensive Course with Google に参加してきました！
 
 コースを通して生成 AI の最前線とその活用について、大きな学びを得ることができました。
 
-本記事では、5日間のコースを日ごとに振り返りながら、そこで得た学びについてまとめたいと思います。
+本記事は、受講レポートとして全5日間のコースの内容を日ごとに振り返りながらまとめたいと思います。
 
-読者の皆さまの次回の参加に繋がったり AI に興味を持つきっかけになれば幸いです！
+読者の皆さまの次回の参加に繋がったり、AI に興味を持つきっかけになれば幸いです！
 
 ## 「5-Day Gen AI Intensive Course with Google」とは？
 
 ![Image](/images/blog/gen-ai-intensive-course-1.png)
 
-[5-Day Gen AI Intensive Course with Google](https://www.kaggle.com/learn-guide/5-day-genai) とは、Google 主催の生成 AI に特化した 5 日間の短期集中オンライン講義です。
+[5-Day Gen AI Intensive Course with Google](https://rsvp.withgoogle.com/events/google-generative-ai-intensive_2025q1) とは、Google 主催の生成 AI に特化した 5 日間の短期集中オンライン講義です。
 
 今回は世界中から約 25 万人が参加したとのことです！すごい！
 
@@ -141,26 +141,27 @@ Embedding の学習には、デュアルエンコーダー構造や Contrastive 
 - [Embeddings and similarity scores](https://www.kaggle.com/code/markishere/day-2-embeddings-and-similarity-scores): Gemini API(text-embedding-004)を使ってテキスト間の類似度スコアの算出を行った。
 - [Classifying embeddings with Keras](https://www.kaggle.com/code/markishere/day-2-classifying-embeddings-with-keras): 同じく text-embedding-004 を用いて文章のカテゴリー分類を行った。具体的には、Keras を用いて 1 つの隠れ層のみのニューラルネットワークを構築し、ベクトル変換を行った文章を説明変数、カテゴリラベルを目的変数として学習させたモデルを作成し、テストデータで性能評価を行った。
 
-## Day 3:
+## Day 3: AI エージェント
 
 ### 学習リソース
 
-- Whitepaper: https://www.kaggle.com/whitepaper-agents
-- Podcast: https://www.youtube.com/watch?v=D3Kaqz7VW28
+- Whitepaper: [https://www.kaggle.com/whitepaper-agents](https://www.kaggle.com/whitepaper-agents)
+- Podcast: [https://www.youtube.com/watch?v=D3Kaqz7VW28](https://www.youtube.com/watch?v=D3Kaqz7VW28)
 - Kaggle Notebook:
-  - https://www.kaggle.com/code/markishere/day-3-function-calling-with-the-gemini-api
-  - https://www.kaggle.com/code/markishere/day-3-building-an-agent-with-langgraph
-- YouTube Live: https://www.youtube.com/watch?v=g6MVIEzFTjY
+  - [https://www.kaggle.com/code/markishere/day-3-function-calling-with-the-gemini-api](https://www.kaggle.com/code/markishere/day-3-function-calling-with-the-gemini-api)
+  - [https://www.kaggle.com/code/markishere/day-3-building-an-agent-with-langgraph](https://www.kaggle.com/code/markishere/day-3-building-an-agent-with-langgraph)
+- YouTube Live: [https://www.youtube.com/watch?v=g6MVIEzFTjY](https://www.youtube.com/watch?v=g6MVIEzFTjY)
 
-3 日目の資料「Agents」では、Generative AI の能力を拡張するためのアプリケーションである AI エージェントについて解説されています。
+3 日目の資料「Agents」では、Generative AI を拡張するためのアプリケーションである **AI エージェント**について解説されています。
 
-AI エージェントの定義は、**目標を達成するために、ツールを用いて外部の世界を観察し、それに基づいて自律的に行動するアプリケーション**です。  
-モデル単体では、知識がトレーニングデータに限定され、外部世界と直接的に対話する能力がありませんが、エージェントは **ツール** を介することで、リアルタイム情報へのアクセスや外部システムとの連携を実現します。
+AI エージェントの定義は、**目標を達成するために、ツールを用いて外部の世界を観察し、それに基づいて自律的に行動するアプリケーション**です。
 
-AI エージェントの動作を規定するのは「**認知アーキテクチャ**」と呼ばれる構造であり、主に以下の 3 つのコンポーネントで構成されます:
+モデル単体では、知識がトレーニングデータに限定され、外部世界と直接的にやりとりできませんが、エージェントは **ツール** を介することで、リアルタイム情報へのアクセスや外部システムとの連携を実現します。
+
+AI エージェントの動作を規定する「**認知アーキテクチャ**」は、主に以下の 3 つのコンポーネントで構成されます:
 
 1.  **モデル**: エージェントプロセスにおいて意思決定を司る言語モデル。
-2.  **ツール**: 基盤モデルと外部世界とのギャップを埋める要素であり、外部データやサービスとの対話を可能にする。エージェント側で API を実行する Extensions、クライアント側での実行指示を行う Functions、外部データアクセスを可能にする Data Stores といった種類がある。
+2.  **ツール**: 基盤モデルと外部世界とのギャップを埋める要素であり、外部データやサービスとのやりとりを可能にする。エージェント側で API を実行する **Extensions**、クライアント側での実行指示を行う **Functions**、外部データアクセスを可能にする **Data Stores** といった種類がある。
 3.  **オーケストレーションレイヤー**: 情報を取り込み、内部で推論を行い、その結果に基づいて次の行動や意思決定を判断する循環的なプロセスを担う。ReAct や Chain-of-Thought といった「**推論フレームワーク**」が利用される。
 
 これらのコンポーネントが連携することで、エージェントはモデル単体では困難な、複雑なタスクの計画・実行や、常に最新の情報を活用した応答が可能となります。
@@ -169,50 +170,51 @@ AI エージェントの動作を規定するのは「**認知アーキテクチ
 
 ### Day 3: Kaggle Notebook
 
-- [Function calling with the Gemini API](https://www.kaggle.com/code/markishere/day-3-function-calling-with-the-gemini-api): ツールとして SQL の実行ができる関数を定義し、自然言語でデータベースの参照ができるエージェントを実装。後半では Python のプログラムの生成・実行もできるようにし、seaborn による実行結果の可視化を行った。
+- [Function calling with the Gemini API](https://www.kaggle.com/code/markishere/day-3-function-calling-with-the-gemini-api): SQL の実行ができる関数をツールとして定義し、自然言語でデータベースの参照ができるエージェントを実装。後半では Python のプログラムの生成・実行もできるようにし、seaborn による実行結果の可視化を行った。
 - [Building an agent with LangGraph](https://www.kaggle.com/code/markishere/day-3-building-an-agent-with-langgraph): メニュー表を元にカフェの注文管理を対話的に行う AI エージェントを LangGraph を用いて実装した。
 
-## Day 4:
+## Day 4: ドメイン特化 LLM
 
 ### 学習リソース
 
-- Whitepaper: https://www.kaggle.com/whitepaper-solving-domains-specific-problems-using-llms
-- Podcast: https://www.youtube.com/watch?v=MWqspvVvNzA
+- Whitepaper: [https://www.kaggle.com/whitepaper-solving-domains-specific-problems-using-llms](https://www.kaggle.com/whitepaper-solving-domains-specific-problems-using-llms)
+- Podcast: [https://www.youtube.com/watch?v=MWqspvVvNzA](https://www.youtube.com/watch?v=MWqspvVvNzA)
 - Kaggle Notebook:
-  - https://www.kaggle.com/code/markishere/day-4-fine-tuning-a-custom-model
-  - https://www.kaggle.com/code/markishere/day-4-google-search-grounding
-- YouTube Live: https://www.youtube.com/watch?v=AN2tpHi26OE
+  - [https://www.kaggle.com/code/markishere/day-4-fine-tuning-a-custom-model](https://www.kaggle.com/code/markishere/day-4-fine-tuning-a-custom-model)
+  - [https://www.kaggle.com/code/markishere/day-4-google-search-grounding](https://www.kaggle.com/code/markishere/day-4-google-search-grounding)
+- YouTube Live: [https://www.youtube.com/watch?v=AN2tpHi26OE](https://www.youtube.com/watch?v=AN2tpHi26OE)
 
 4 日目の資料「Solving Domain-Specific Problems Using LLMs」では、サイバーセキュリティや医療のような専門分野における複雑な課題解決への LLM の応用について取り上げられました。
 
 サイバーセキュリティ分野では、常に変化する攻撃手法や人材不足といった課題が存在します。
 
-これに対し、SecLM というセキュリティに特化した LLM が提案されています。SecLM は、専門家がセキュリティリスクをより効果的に分析・対応できるよう支援することを目指しており、自然言語での質問応答や、セキュリティツール・データとの連携を可能にします。
+これに対し、**SecLM** というセキュリティに特化した LLM が提案されています。SecLM は、専門家がセキュリティリスクをより効果的に分析・対応できるよう支援することを目指しており、自然言語での質問応答や、セキュリティツール・データとの連携を可能にします。
 
 このアプローチでは、セキュリティ特化の LLM に加え、ツール、信頼性のあるデータストア、推論、行動計画を管理する柔軟なプランニングフレームワーク（推論フレームワーク含む）を組み合わせることが重要視されています。
 
 特に、最新の攻撃手法や脆弱性、ユーザー固有データに対応するため、RAG や PET(parameter-efficient tuning)などの技術が活用されています。
 
 一方、医療分野は、膨大かつ絶えず変化する知識、そして状況依存的な判断の必要性といった課題があります。
-MedLM は、この医療分野のためにファインチューニングされた LLM の一種です。
+**MedLM** は、この医療分野のためにファインチューニングされた LLM の一種です。
+
 Med-PaLM はその初期バージョンであり、医療に関する質問応答タスクにおいて、米国の医師国家試験（USMLE）スタイルの問題で専門家レベルの性能を達成しています。
 医療における生成 AI は、トリアージ、問診プロセスの改善、医師への情報提供など、多様な応用可能性が示されています。
 
-結論として、特定の専門分野に特化した LLM は、それぞれの分野での課題解決において大きな可能性を秘めていますが、その効果的な運用には、単に技術の進化だけでなく、各分野の専門家との密な連携、そして厳格な評価と責任ある導入プロセスが重要であると述べられています。
+特定の専門分野に特化した LLM は、それぞれの分野での課題解決において大きな可能性を秘めていますが、その効果的な運用には、単に技術の進化だけでなく、各分野の専門家との密な連携、そして厳格な評価と責任ある導入プロセスが重要であると述べられています。
 
 ### Day 4: Kaggle Notebook
 
 - [Fine tuning a custom model](https://www.kaggle.com/code/markishere/day-4-fine-tuning-a-custom-model): 文章の分類モデルのファインチューニングを行った。トレーニングデータと共に、従来の機械学習で用いるバッチサイズ、エポック数、Learning Rate といったハイパーパラメータを指定するだけでチューニングが完了し、正答率が 37% → 87% ほどまで向上した。
 - [Google Search grounding](https://www.kaggle.com/code/markishere/day-4-google-search-grounding): 特定の情報源に基づいて LLM の生成内容を裏付ける Grounding というテクニックの実装例を確認した。具体的には、Gemini のツールとして Google Search を指定し、Google 検索の結果をもとに回答を行うプログラムを作成した。
 
-## Day 5:
+## Day 5: MLOps を用いた生成 AI の運用
 
 ### 学習リソース
 
-- Whitepaper: https://www.kaggle.com/whitepaper-operationalizing-generative-ai-on-vertex-ai-using-mlops
-- Podcast: https://www.youtube.com/watch?v=Hbk8UXavHrk
+- Whitepaper: [https://www.kaggle.com/whitepaper-operationalizing-generative-ai-on-vertex-ai-using-mlops](https://www.kaggle.com/whitepaper-operationalizing-generative-ai-on-vertex-ai-using-mlops)
+- Podcast: [https://www.youtube.com/watch?v=Hbk8UXavHrk](https://www.youtube.com/watch?v=Hbk8UXavHrk)
 - Kaggle Notebook: なし
-- YouTube Live: https://www.youtube.com/watch?v=eZ-8UQ_t4YM
+- YouTube Live: [https://www.youtube.com/watch?v=eZ-8UQ_t4YM](https://www.youtube.com/watch?v=eZ-8UQ_t4YM)
 
 5 日目の Whitepaper は、生成 AI システムを安定的かつ継続的に運用するために、開発、評価、デプロイ、監視、ガバナンスといった従来のシステム開発のライフサイクル全体における MLOps のプラクティスの拡張方法についての解説が中心でした。
 
@@ -225,7 +227,7 @@ Med-PaLM はその初期バージョンであり、医療に関する質問応�
   - Data Practices: プロンプト、ベクトルデータベース、合成データなど様々なデータを統合し、バージョン管理・追跡・再現可能な形で扱えるパイプラインの構築が必要
   - Evaluate: 手動評価と自動評価のトレードオフを理解した上でユースケースに即した評価手法を設計
 - Deploy: プロンプトや外部データセット、チューニング済みモデルなど、生成 AI 独自のリソースを含む CI/CD、インフラ構築、モデル最適化が必要
-- チェーン要素およびその構成要素も新たなアセットとして捉え、開発からデプロイ、モニタリングまでのライフサイクルを通じてガバナンスが必要
+- Govern: チェーン要素およびその構成要素も新たなアセットとして捉え、開発からデプロイ、モニタリングまでのライフサイクルを通じてガバナンスが必要
 
 ## Capstone Project
 
@@ -237,20 +239,32 @@ Capstone Project の概要は以下の通りです:
 
 [https://www.kaggle.com/competitions/gen-ai-intensive-course-capstone-2025q1/overview](https://www.kaggle.com/competitions/gen-ai-intensive-course-capstone-2025q1/overview)
 
-- **目標:** コースで学んだ生成 AI の機能を少なくとも 3 つ以上デモンストレーションする
-- **形式:** Kaggle Notebook でコードを提出する
+- **目標:** コースで学んだ生成 AI の機能を少なくとも 3 つ以上デモンストレーションする。
+- **形式:** Kaggle Notebook でコードを提出する。
 - **テーマ:** ユースケースは自由であり、創造的で現実世界の問題解決を目指すことが推奨される
-- **評価:** Notebook がエラーなく実行可能で、最低 3 つの生成 AI の機能を利用していることを最低限の条件とし、ユースケースの革新性、ドキュメントの質などが評価される。任意でブログ記事と YouTube 動画を作成すれば加点対象になる。
+- **評価:** Notebook がエラーなく実行可能で、最低 3 つの生成 AI の機能を利用していることを最低要件とし、ユースケースの革新性、ドキュメントの質などが評価される。任意でブログ記事と YouTube 動画を作成すれば加点対象になる。
+- **特典:** Notebook を提出し上記最低要件を満たしていれば、Kaggle バッジと修了証がもらえる。優秀者は Kaggle のコンペティションページに掲載される。
 
-私は、指定した論文の QA を自然言語でやりとりできる **ScholarAgent** という AI エージェントを開発し、RAG, Agent, Function calling, Vector search, Vector DB などの技術のデモンストレーションを行いました。
+![Image](/images/blog/gen-ai-intensive-course-3.png)
+(_私がCapstone Project で作成した "ScholarAgent"_)
+
+私は、指定した論文の QA を自然言語でやりとりできる **ScholarAgent** という AI エージェントを開発し、RAG, Agent, Function Calling, Vector search, Vector DB などの技術のデモンストレーションを行いました。
 
 詳細は別記事で解説しているのでぜひご覧ください。
 
 - [ブログ記事(英語)](https://masa373.work/blog/gen-ai-intensive-capstone)
 - [Kaggle Notebook](https://www.kaggle.com/code/masa373dev/capstone-scholaragent)
 
+無事に Kaggle バッジと修了証をゲットしました！
+
+![Image](/images/blog/gen-ai-intensive-course-4.png)
+_([https://www.kaggle.com/certification/badges/masa373dev/96](https://www.kaggle.com/certification/badges/masa373dev/96))_
+
 ## 結論
 
-生成 AI の最前線の知識を吸収することに5日間がっつりと集中でき、非常に有意義な時間となりました！
+生成 AI の最前線の知識を吸収することに5日間がっつりと集中でき、非常に有意義な時間となりました！  
 こんなに良質なコンテンツを無償で提供してくれた Google さんには感謝しかないです。
-AIにより言語格差がなくなってきているので、翻訳ツールの助けも借りながら、最新のAI情報は英語でどんどんキャッチアップしていきたいですね！
+
+やはり良質なコンテンツや情報ソースはまだまだ英語が中心であり、最新のAI情報を追っていくには英語が必須だなと改めて感じました。
+
+しかしここもAIにより言語格差がなくなってきているので、翻訳ツールの助けも借りながら、どんどん新鮮な情報をキャッチアップしていきたいですね！
