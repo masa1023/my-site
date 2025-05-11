@@ -190,7 +190,7 @@ Med-PaLM はその初期バージョンであり、医療に関する質問応�
 
 ### Day 4: Kaggle Notebook
 
-- [Fine tuning a custom model](https://www.kaggle.com/code/markishere/day-4-fine-tuning-a-custom-model): 文章の分類モデルのファインチューニングを行った。トレーニング用データーと共に、従来の機械学習で用いるバッチサイズ、エポック数、Learning Late といったハイパーパラメーターを指定するだけでチューニングが完了し、正答率が 37%->87%ほどまで向上した。
+- [Fine tuning a custom model](https://www.kaggle.com/code/markishere/day-4-fine-tuning-a-custom-model): 文章の分類モデルのファインチューニングを行った。トレーニング用データーと共に、従来の機械学習で用いるバッチサイズ、エポック数、Learning Rate といったハイパーパラメーターを指定するだけでチューニングが完了し、正答率が 37%->87%ほどまで向上した。
 - [Google Search grounding](https://www.kaggle.com/code/markishere/day-4-google-search-grounding): 特定の情報源に基づいて LLM の生成内容を裏付ける Grounding というテクニックの実装例を確認した。具体的には、Gemini のツールとして Google Search を指定し、Google 検索の結果をもとに回答を行うプログラムを作成した。
 
 ## Day 5:
@@ -230,7 +230,7 @@ Capstone Project の概要は以下の通りです:
 - **テーマ:** ユースケースは自由であり、創造的で現実世界の問題解決を目指すことが推奨される
 - **評価:** Notebook がエラーなく実行可能で、最低 3 つの生成 AI の機能を利用していることを最低限の条件とし、ユースケースの革新性、ドキュメントの質などが評価される。任意でブログ記事と YouTube 動画を作成すれば加点対象になる。
 
-私は、指定した論文の QA を自然言語でやりとりできる **ScholorAgent** という AI エージェントを開発し、RAG, Agent, Function calling, Vector search, Vector DB などの技術のデモンストレーションを行いました。
+私は、指定した論文の QA を自然言語でやりとりできる **ScholarAgent** という AI エージェントを開発し、RAG, Agent, Function calling, Vector search, Vector DB などの技術のデモンストレーションを行いました。
 
 詳細は別記事で解説しているのでぜひご覧ください。
 
