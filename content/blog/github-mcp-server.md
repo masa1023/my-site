@@ -142,7 +142,7 @@ VS Code や Cline など MCP に対応した MCP Host はいくつかありま�
 
 ### Claude のインストール
 
-Web 版は MCP に対応していないので、こちらから Claude のデスクトップアプリをインストールしてください。
+現時点で Web 版は MCP に対応していないので、こちらから Claude のデスクトップアプリをインストールしてください。
 
 [https://claude.ai/download](https://claude.ai/download)
 
