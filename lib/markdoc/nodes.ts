@@ -20,6 +20,10 @@ export const nodes = {
     ...defaultNodes.item,
     render: 'li',
   },
+  code: {
+    ...defaultNodes.code,
+    render: 'code',
+  },
   fence: {
     render: 'Fence',
     attributes: {

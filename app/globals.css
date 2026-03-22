@@ -179,3 +179,14 @@
 .prose hr {
   @apply my-8 border-muted;
 }
+
+/* Tailwind Typography はインラインコードにスタイルを付けないため、手動で追加 */
+.prose :not(pre) > code {
+  @apply bg-muted text-foreground rounded px-1.5 py-0.5 text-sm font-mono;
+}
+
+/* Tailwind Typography がデフォルトで付与するバッククォート疑似要素を無効化 */
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: none;
+}
