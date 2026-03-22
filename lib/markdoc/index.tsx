@@ -4,6 +4,7 @@ import { nodes } from './nodes'
 import { tags } from './tags'
 import { Callout } from '@/components/ui/callout'
 import { CodeBlock } from '@/components/ui/code-block'
+import { MermaidDiagram } from '@/components/ui/mermaid-diagram'
 import { codeToHtml } from 'shiki'
 import type { BundledLanguage } from 'shiki'
 
@@ -12,10 +13,14 @@ export async function Fence({
   language,
 }: {
   content: string
-  language: BundledLanguage
+  language: string
 }) {
+  if (language === 'mermaid') {
+    return <MermaidDiagram content={content} />
+  }
+
   const html = await codeToHtml(content, {
-    lang: language,
+    lang: language as BundledLanguage,
     theme: 'tokyo-night',
   })
   return <CodeBlock content={content} html={html} />
@@ -33,6 +38,7 @@ export function parseMarkdown(content: string) {
     components: {
       Callout,
       Fence,
+      MermaidDiagram,
     },
   })
 }
