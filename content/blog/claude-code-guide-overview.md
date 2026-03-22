@@ -1,8 +1,8 @@
 ---
-title: 'Claude完全ガイド 2026 — 5つのプロダクトを使い分けて、仕事も生活もAIに任せる時代へ'
-description: 'フルスタック AI 開発エージェントとして再注目の Bolt.new で、Next.js のブログサイトを構築し、 Cloudflare Pages にデプロイするまでの流れを解説します。'
-date: '2025-04-16'
-tags: ['Bolt.new', 'AI Agents', 'Next.js', 'Cloudflare']
+title: 'Claude Code 完全ガイド【入門編】— 業務をまるごと回すためのClaudeの全体像と基礎知識'
+description: 'Claudeの複数プロダクトの使い分けから、Claude Codeの各種機能（スキル・MCP・サブエージェント・エージェントチーム）まで、業務をまるごとAIに任せるための全体像と基礎知識を解説します。'
+date: '2026-03-22'
+tags: ['Claude Code', 'Anthropic', 'AI Agents']
 ---
 
 ## AIは「質問に答える」から「タスクを実行する」へ
