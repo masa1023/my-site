@@ -49,9 +49,9 @@ graph TB
     Desktop --> DCode
     Desktop --> Cowork
 
-    style Brain fill:#6B46C1,color:#fff,stroke:none
-    style Code fill:#F59E0B,color:#fff,stroke:none
-    style DCode fill:#F59E0B,color:#fff,stroke:none
+    style Brain fill:#C15F3C,color:#fff,stroke:none
+    style Code fill:#C15F3C,color:#fff,stroke:none
+    style DCode fill:#C15F3C,color:#fff,stroke:none
     style Cowork fill:#3B82F6,color:#fff,stroke:none
     style Web fill:#10B981,color:#fff,stroke:none
     style Mobile fill:#10B981,color:#fff,stroke:none
@@ -197,7 +197,7 @@ graph LR
     MCP --- GCal["Google Calendar"]
     MCP --- Gmail["Gmail"]
 
-    style CC fill:#F59E0B,color:#fff,stroke:none
+    style CC fill:#C15F3C,color:#fff,stroke:none
     style Skills fill:#8B5CF6,color:#fff,stroke:none
     style MCP fill:#3B82F6,color:#fff,stroke:none
     style Plugin fill:#10B981,color:#fff,stroke:none
@@ -270,8 +270,8 @@ graph TB
         TM2 <-->|直接やりとり| TM3
     end
 
-    style sub fill:#FEF3C7,stroke:#F59E0B
-    style team fill:#DBEAFE,stroke:#3B82F6
+    style sub fill:#FEF3C7,stroke:#D97706,color:#333
+    style team fill:#DBEAFE,stroke:#3B82F6,color:#333
     style Main1 fill:#F59E0B,color:#fff,stroke:none
     style Lead fill:#3B82F6,color:#fff,stroke:none
     style SA1 fill:#FCD34D,color:#333,stroke:none
